@@ -12,8 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <UIKit/UIKit.h>
+#import "NSView+UIView.h"
 
-@interface AppDelegate : UIResponder<UIApplicationDelegate>
+#if TARGET_OS_OSX
+
+#import <AppKit/AppKit.h>
+
+@implementation NSView (UIView)
+
+- (NSColor *)platformBackgroundColor {
+    return [NSColor colorWithCGColor:self.layer.backgroundColor];
+}
+
+- (void)setPlatformBackgroundColor:(NSColor *)platformBackgroundColor {
+    self.wantsLayer = YES;
+    self.layer.backgroundColor = platformBackgroundColor.CGColor;
+}
+
+- (BOOL)platformOpaque {
+    return self.layer.opaque;
+}
+
+- (void)setPlatformOpaque:(BOOL)platformOpaque {
+    self.wantsLayer = YES;
+    self.layer.opaque = platformOpaque;
+}
 
 @end
+
+#endif

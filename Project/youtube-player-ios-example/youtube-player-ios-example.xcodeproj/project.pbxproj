@@ -238,6 +238,9 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "YouTube Developer Relations";
 				TargetAttributes = {
+					4D6993DD18E22E0C0073680F = {
+						ProvisioningStyle = Manual;
+					};
 					4D6993FE18E22E0C0073680F = {
 						TestTargetID = 4D6993DD18E22E0C0073680F;
 					};
@@ -526,11 +529,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "youtube-player-ios-example/youtube-player-ios-example-Prefix.pch";
 				INFOPLIST_FILE = "youtube-player-ios-example/youtube-player-ios-example-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.youtube.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -542,11 +548,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "youtube-player-ios-example/youtube-player-ios-example-Prefix.pch";
 				INFOPLIST_FILE = "youtube-player-ios-example/youtube-player-ios-example-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.youtube.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

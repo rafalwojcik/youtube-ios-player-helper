@@ -12,8 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <UIKit/UIKit.h>
+#import <TargetConditionals.h>
 
-@interface AppDelegate : UIResponder<UIApplicationDelegate>
+#if TARGET_OS_IOS
+
+#import <UIKit/UIView.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+/// :nodoc:
+@interface UIView (NSView)
+
+@property (strong, nonatomic) UIColor *platformBackgroundColor;
+@property (nonatomic) BOOL platformOpaque;
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#endif

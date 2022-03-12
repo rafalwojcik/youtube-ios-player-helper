@@ -12,8 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <UIKit/UIKit.h>
+#import <TargetConditionals.h>
 
-@interface AppDelegate : UIResponder<UIApplicationDelegate>
+#if TARGET_OS_OSX
+
+#import <AppKit/NSView.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+/// :nodoc:
+@interface NSView (UIView)
+
+#pragma mark - Properties
+
+// Need to use some common with iOS property with different name, other then `backgroundColor` because setter and getter will not be called.
+@property (strong, nonatomic) NSColor *platformBackgroundColor;
+@property (nonatomic) BOOL platformOpaque;
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#endif
